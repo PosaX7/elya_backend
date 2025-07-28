@@ -1,0 +1,11 @@
+categorie,sous_groupe,niveau,quizz,question,reponse_1,reponse_2,reponse_3,reponse_4,bonne_reponse
+Mathématiques,Algèbre,1,Initiation à l'algèbre,Combien font 2 + 2 ?,3,4,5,6,2
+Mathématiques,Algèbre,1,Initiation à l'algèbre,Combien font 5 - 3 ?,1,2,3,4,2
+Mathématiques,Algèbre,2,Initiation à l'algèbre,Quel est le carré de 5 ?,20,25,30,35,2
+Sciences,Vie,1,Biologie de base,Quel organe pompe le sang ?,Poumon,Estomac,Cœur,Foie,3
+Sciences,Vie,1,Biologie de base,Combien de paires de chromosomes possède l’être humain ?,23,22,24,21,1
+Histoire,Antiquité,1,Histoire Romaine,Qui a fondé Rome selon la légende ?,César,Romulus,Augustus,Néron,2
+Histoire,Antiquité,2,Histoire Romaine,Quelle civilisation a précédé Rome ?,Étrusques,Grecs,Égyptiens,Phéniciens,1
+Langues,Français,1,Orthographe de base,Quel mot est correctement orthographié ?,apparament,apparemment,apparrement,aparament,2
+Langues,Français,2,Orthographe de base,Choisissez la bonne conjugaison : « ils ___ » (venir),vienne,viennent,vient,viens,2
+Culture générale,Géographie,1,Capitale du monde,Quelle est la capitale du Canada ?,Toronto,Vancouver,Ottawa,Montréal,3

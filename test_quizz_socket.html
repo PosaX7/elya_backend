@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Test WebSocket Quizz</title>
+</head>
+<body>
+    <h1>WebSocket Quizz - Room : <span id="room-name">room1</span></h1>
+
+    <input id="messageInput" type="text" placeholder="Tape ton message">
+    <button onclick="sendMessage()">Envoyer</button>
+
+    <ul id="chat-log"></ul>
+
+    <script>
+        const roomName = document.getElementById("room-name").textContent;
+        const wsUrl = `ws://localhost:8000/ws/quizz/${roomName}/`;
+
+        const chatSocket = new WebSocket(wsUrl);
+
+        chatSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            const message = data.message;
+
+            const chatLog = document.getElementById("chat-log");
+            const newMessage = document.createElement("li");
+            newMessage.textContent = message;
+            chatLog.appendChild(newMessage);
+        };
+
+        chatSocket.onclose = function(e) {
+            console.error("WebSocket fermé de manière inattendue");
+        };
+
+        function sendMessage() {
+            const input = document.getElementById("messageInput");
+            const message = input.value;
+            if (chatSocket.readyState === WebSocket.OPEN) {
+                chatSocket.send(JSON.stringify({ "message": message }));
+                input.value = "";
+            } else {
+                console.error("WebSocket is not open.");
+            }
+        }
+    </script>
+</body>
+</html>
